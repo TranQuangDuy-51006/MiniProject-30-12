@@ -77,12 +77,3 @@ select * from book;
 
 select * from borrow;
 -- where borrow_date < '2024-09-18';
-
-select 
-    r.reader_name,
-    b.book_title,
-    br.borrow_date,
-    br.return_date
-from borrow br
-join reader r on br.reader_id = r.reader_id
-join book b on br.book_id = b.book_id;
